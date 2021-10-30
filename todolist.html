@@ -1,15 +1,82 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="./src/todolist.js"></script>
+    <style type="text/css">
+      @import './src/todolist.css';
+    </style>
     <title>Document</title>
-</head>
-<body>
-  <div>
-<!--      todolist-->
-  </div>
-
-</body>
+  </head>
+  <body>
+    <div class="main" id="main-id">
+      <div class="todo-list">
+        <label>todos</label>
+      </div>
+      <div class="todo-list-all" style='background-color: rgb(254,254,254);'>
+        <div class="add-todo-item" id="add-todo-item-id">
+          <div class="triangle" style="margin: auto 1rem" onclick="setVisible()">
+            <div class="content" id='content' value=''></div>
+          </div>
+          <label for="item-input-text"></label>
+          <input
+            type="text"
+            id="item-input-text"
+            class="add-item-input"
+            placeholder="What needs to be done?"
+            value=""
+            onkeypress="addTodoItem(event)"
+          />
+        </div>
+        <div class="todo-item-list" id="todo-item-list-id">
+          <ul class="todo-item-ul" id="todo-item-ul-id"></ul>
+        </div>
+        <div class="toolbar">
+          <div class="total" id="total-count">
+            <span style="height: 1rem; font-size: 1rem; display:inline-block;line-height: 3rem;margin-left: 0.5rem;"
+              >0 item left</span
+            >
+          </div>
+          <div class="radio" id="radio-id">
+            <input
+              type="radio"
+              name="show-radio-name"
+              class="radio-item"
+              value="All"
+              id="radio-all"
+              onclick="radioChange(this)"
+            /><label for="radio-all" id="radio-all-label"><span>All</span> </label
+            ><input
+              type="radio"
+              name="show-radio-name"
+              class="radio-item"
+              value="Active"
+              id="radio-active"
+              onclick="radioChange(this)"
+            /><label for="radio-active"><span>Active</span></label>
+            <input
+              type="radio"
+              name="show-radio-name"
+              class="radio-item"
+              value="Finished"
+              id="radio-finished"
+              onclick="radioChange(this)"
+            /><label for="radio-finished"><span>Completed</span></label>
+            <input
+              type="radio"
+              name="show-radio-name"
+              class="radio-item"
+              value="Clear completed"
+              id="radio-clear"
+              onclick="radioChange(this)"
+            /><label for="radio-clear" style="margin-left: 5rem;"><span>Clear completed</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
