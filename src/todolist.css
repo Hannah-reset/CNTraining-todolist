@@ -1,0 +1,90 @@
+
+.triangle .content{
+    width: 10px;
+    height: 10px;
+    border:#666 solid;
+    border-width: 3px 3px 0 0;
+    transform: rotate(135deg);
+    margin-bottom: 10px;
+    }
+.main {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: white;
+
+
+}
+
+.todo-list {
+    font-size: 4rem;
+    text-align: center;
+    padding: 1rem;
+    color:coral;
+    opacity: 0.2;
+}
+
+.todo-list-all {
+    text-align: center;
+    height:auto;
+    width: 50%;
+    margin:0 auto;
+    /* border:1px solid black; */
+}
+.add-todo-item {
+    text-align: center;
+    height: 3rem;
+display: flex;
+flex-direction: row;
+    margin:0 auto;
+    /* border:1px solid black; */
+}
+
+.add-item-input {
+    height: 3.0rem;
+    width: 100%;
+    font-size: 1.6rem;
+    background: #eee;
+    border:0;
+    color: darkgray;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+input[type="radio"] { display:none; }
+input[type="radio"]:checked{
+    visibility:hidden;
+}
+
+.todo-item-list {
+    max-height: 30rem;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+.todo-item-ul{
+    text-align: start;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+}
+.radio {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+.total{
+    text-align: center;
+}
+.radio-item {
+    margin-left: 1rem;
+}
+label{
+    margin:1rem;
+}
